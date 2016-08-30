@@ -10,9 +10,9 @@ var ResponsiveMixin = {
         match: handler
       };
     }
-    enquire.register(query, handler);
+    !!enquire && enquire.register(query, handler);
 
-    // Queue the handlers to unregister them at unmount  
+    // Queue the handlers to unregister them at unmount
     if (! this._responsiveMediaHandlers) {
       this._responsiveMediaHandlers = [];
     }
